@@ -1,4 +1,4 @@
-# test_GNL
+# test
 ```sh
 🐹
 🐰
