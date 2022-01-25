@@ -5,13 +5,16 @@
 
 int	main(int ac, char **v)
 {
-	if (ac^1 && ac^2)	return 0 ;
+	if (ac > 3) return 0 ;
 
         char	*line;
 	int	N, p1, p2, p3, i = 0, L = 10;
 
-	if ((N = (ac==1) ? 1 : atoi(v[1])) > 4)	return 0;
-	if (N == 1){
+	if ((N = (ac==1) ? 1 : atoi(v[1])) > 4) return 0;
+
+        if (ac == 3)    L = atoi(v[2]);
+
+        if (N == 1){
 		p1 = open("texts/MSP", O_RDONLY);
 		p2 = open("texts/ANM", O_RDONLY);
 		p3 = open("texts/RT", O_RDONLY);
