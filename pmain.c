@@ -10,6 +10,7 @@
 #define S "usage: cat [-benstuv] [file ...]"
 #define ILOPT printf("a.out: illegal option -- ")
 #define USAGE printf("%s\n", S)
+#define WARNG printf("\e[1;101m  ...two values are the same  \e[0m\n\n")
 void	print(void);
 void	print_(char, char *);
 
@@ -89,6 +90,7 @@ void	print(void)
 	pf_;
 	printf("\e[1;3;32m%i\033[0m\n", f_);
 	ss;
+	if (f_ ^ f)	WARNG;
 
 	//	s
 	ft;
@@ -100,6 +102,8 @@ void	print(void)
 	pf_;
 	printf("\e[1;3;32m%i\033[0m\n", f_);
 	ss;
+	if (f_ ^ f)	WARNG;
+
 
 	//	p
 	ft;
@@ -111,6 +115,7 @@ void	print(void)
 	pf_;
 	printf("\e[1;3;32m%i\033[0m\n", f);
 	ss;
+	if (f_ ^ f)	WARNG;
 
 	//	d
 	ft;
@@ -122,6 +127,7 @@ void	print(void)
 	pf_;
 	printf("\e[1;3;32m%i\033[0m\n", f);
 	ss;
+	if (f_ ^ f)	WARNG;
 
 	//	u
 	ft;
@@ -133,6 +139,7 @@ void	print(void)
 	pf_;
 	printf("\e[1;3;32m%u\033[0m\n", f);
 	ss;
+	if (f_ ^ f)	WARNG;
 
 	//	x
 	ft;
@@ -144,6 +151,7 @@ void	print(void)
 	pf_;
 	printf("\e[1;3;32m%i\033[0m\n", f);
 	ss;
+	if (f_ ^ f)	WARNG;
 
 	//	X
 	ft;
@@ -155,6 +163,8 @@ void	print(void)
 	pf_;
 	printf("\e[1;3;32m%i\033[0m\n", f);
 	ss;
+	//f_ ++;
+	if (f_ ^ f)	WARNG;
 
 	//	%
 	ft;
@@ -166,6 +176,7 @@ void	print(void)
 	pf_;
 	printf("\e[1;3;32m%i\033[0m\n", f);
 	ss;
+	if (f_ ^ f)	WARNG;
 
 	ft;
 	f = ft_printf("%% %%%% %%%%%% %%%%%%%% %%%%%%%%%% %%%%%%%%%%%% %%%%%%%%%%%%%%%%\n");
@@ -176,4 +187,5 @@ void	print(void)
 	pf_;
 	printf("\e[1;3;32m%i\033[0m\n", f);
 	ss;
+	if (f_ ^ f)	WARNG;
 }

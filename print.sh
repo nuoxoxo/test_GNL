@@ -1,15 +1,48 @@
 gcc -Wall -Werror -Wextra pmain.c ../*.c -fsanitize=address &&
 
 ./a.out
+./a.out c a
+./a.out c b
 ./a.out c c
+./a.out c x
+./a.out c y
+./a.out c z
+./a.out c ^
+./a.out c \`
+./a.out c \<
+./a.out c _
+./a.out c \}
+./a.out c ~
+./a.out c +
 ./a.out c jump
-
+./a.out c hello
+./a.out c !world
 
 ./a.out s HelloWorld
 ./a.out s "Hello, World!"
+./a.out s "Goodbye! Cruel World."
+./a.out s "Lorem ipsum"
+./a.out s "You catch the airport shuttle and try to book a new flight to your destination."
+./a.out s "Today, you set out on the task of perfecting your milk-dunking cookie recipe."
+./a.out s "Walking along the memory banks of the stream, you find a small village that is experiencing a little confusion: some programs can't communicate with each other." 
+#./a.out s "\\t\n\v\v\v\n\n\t\t\tabc\t\t\n\t\v\n\v\v\n\nxyz\n"
 
+./a.out p 16
+./a.out p 64
 ./a.out p "Hello, World!"
+./a.out p -256
+./a.out p 512
+./a.out p 1024
+./a.out p "Lorem ipsum"
+./a.out p -8192
+./a.out p 16384
 ./a.out p "Goodbye! Cruel World."
+./a.out p -32768
+./a.out p 65536
+./a.out p "Today, you set out on the task of perfecting your milk-dunking cookie recipe."
+./a.out p -131072
+./a.out p "You catch the airport shuttle and try to book a new flight to your destination."
+./a.out p "Walking along the memory banks of the stream, you find a small village that is experiencing a little confusion: some programs can't communicate with each other." 
 
 
 ./a.out i 1
