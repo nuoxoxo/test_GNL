@@ -1,1 +1,1 @@
-# "Remain indoors."
+# Remain indoors.
