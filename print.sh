@@ -1,3 +1,5 @@
+if gcc -E ../ft_printf.h
+then
 gcc -Wall -Werror -Wextra pmain.c ../*.c -fsanitize=address &&
 
 ./a.out
@@ -103,3 +105,7 @@ gcc -Wall -Werror -Wextra pmain.c ../*.c -fsanitize=address &&
 
 ./a.out % 
 ./a.out
+
+else
+	echo "\nwRoNg TeSt.\n"
+fi
