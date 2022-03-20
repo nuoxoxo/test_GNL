@@ -2,6 +2,7 @@ if gcc -E ../ft_printf.h
 then
 gcc -Wall -Werror -Wextra pmain.c ../*.c -fsanitize=address &&
 
+
 ./a.out
 ./a.out c a
 ./a.out c b
@@ -20,6 +21,7 @@ gcc -Wall -Werror -Wextra pmain.c ../*.c -fsanitize=address &&
 ./a.out c hello
 ./a.out c !world
 
+
 ./a.out s HelloWorld
 ./a.out s "Hello, World!"
 ./a.out s "Goodbye! Cruel World."
@@ -28,6 +30,7 @@ gcc -Wall -Werror -Wextra pmain.c ../*.c -fsanitize=address &&
 ./a.out s "Today, you set out on the task of perfecting your milk-dunking cookie recipe."
 ./a.out s "Walking along the memory banks of the stream, you find a small village that is experiencing a little confusion: some programs can't communicate with each other." 
 #./a.out s "\\t\n\v\v\v\n\n\t\t\tabc\t\t\n\t\v\n\v\v\n\nxyz\n"
+
 
 ./a.out p 16
 ./a.out p 64
