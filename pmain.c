@@ -10,7 +10,7 @@
 #define S "usage: cat [-benstuv] [file ...]"
 #define ILOPT printf("a.out: illegal option -- ")
 #define USAGE printf("%s\n", S)
-#define WARNG printf("\e[1;101m  ...two values are the same  \e[0m\n\n")
+#define WARNG printf("\e[1;101m  ...two values are not the same  \e[0m\n\n")
 void	print(void);
 void	print_(char, char *);
 
